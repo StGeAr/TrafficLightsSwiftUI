@@ -8,32 +8,27 @@
 import SwiftUI
 
 struct TrafficLigtsView: View {
-    
-    @State private var tapCount = 0
-    
+     
     var body: some View {
-        VStack {
-            trafficLights
-            startButton
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+            VStack {
+                trafficLights
+                Spacer()
+                ButtonView()
+            }
+            .padding(EdgeInsets(top: 16, leading: 0, bottom: 16, trailing: 0))
         }
     }
     
     private var trafficLights: some View {
         VStack {
             ColorCircleView (color: .red)
+                .padding(.bottom)
             ColorCircleView (color: .yellow)
+                .padding(.bottom)
             ColorCircleView (color: .green)
-        }
-    }
-    
-    private var startButton: some View {
-        ZStack {
-            ColorCircleView(color: .orange)
-            Button(action: { tapCount += 1 }) {
-                Text("START")
-                    .font(.title)
-                    .fontWeight(.heavy)
-            }
         }
     }
 }

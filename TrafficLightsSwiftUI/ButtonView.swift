@@ -9,22 +9,26 @@ import SwiftUI
 
 struct ButtonView: View {
     
-    @State private var tapCount = 0
+    @State private var buttonText = "START"
     
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(.red)
-                .frame(width: 200, height: 100)
+                .foregroundColor(.blue)
+                .frame(width: 150, height: 50)
                 .clipShape(Capsule())
                 .overlay(Capsule().stroke(Color.white, lineWidth: 5))
-            Button(action: { tapCount += 1 }) {
-                Text("START")
+            Button(action: buttonPressed) {
+                Text(buttonText)
                     .foregroundColor(.white)
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.heavy)
             }
         }
+    }
+    
+    private func buttonPressed() {
+        buttonText = "NEXT"
     }
 }
 
@@ -32,6 +36,7 @@ struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color(.black)
+                .ignoresSafeArea()
             ButtonView()
         }
     }

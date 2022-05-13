@@ -15,9 +15,7 @@ struct ButtonView: View {
     
     @State private var buttonText = "START"
     @State private var currentLight = CurrentLight.red
-    @State private var lightIsOn: CGFloat = 1
-    @State private var lightIsOff: CGFloat = 0.3
-    
+   
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
@@ -35,16 +33,16 @@ struct ButtonView: View {
     
     private func buttonPressed() {
         buttonText = "NEXT"
-        
+    
         switch currentLight {
         case .red:
-            print("1")
+            print("\(currentLight)")
             currentLight = .yellow
         case .yellow:
-            print("2")
+            print("\(currentLight)")
             currentLight = .green
         case .green:
-            print("3")
+            print("\(currentLight)")
             currentLight = .red
         }
     }

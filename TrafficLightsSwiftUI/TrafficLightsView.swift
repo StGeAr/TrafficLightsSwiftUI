@@ -33,7 +33,7 @@ struct TrafficLightsView: View {
     }
 }
 
-struct TrafficLigtsView_Previews: PreviewProvider {
+struct TrafficLightsView_Previews: PreviewProvider {
     static var previews: some View {
         TrafficLightsView()
     }

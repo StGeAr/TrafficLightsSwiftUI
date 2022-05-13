@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ColorCircleView: View {
     let color: Color
-    let opacity: CGFloat
+    var opacity: CGFloat
     
     var body: some View {
         Circle()
@@ -25,7 +25,7 @@ struct ColorCircleView_Previews: PreviewProvider {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
-            ColorCircleView(color: .red, opacity: 0.3)
+            ColorCircleView(color: .orange, opacity: 0.3)
         }
     }
 }

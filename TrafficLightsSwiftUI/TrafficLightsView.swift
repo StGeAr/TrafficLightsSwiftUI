@@ -24,11 +24,11 @@ struct TrafficLightsView: View {
     
     private var trafficLights: some View {
         VStack {
-            ColorCircleView (color: .red)
+            ColorCircleView (color: .red, opacity: 0.3)
                 .padding(.bottom)
-            ColorCircleView (color: .yellow)
+            ColorCircleView (color: .yellow, opacity: 0.3)
                 .padding(.bottom)
-            ColorCircleView (color: .green)
+            ColorCircleView (color: .green, opacity: 0.3)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  TrafficLigtsView.swift
+//  TrafficLightsView.swift
 //  TrafficLightsSwiftUI
 //
 //  Created by Герман Ставицкий on 13.05.2022.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TrafficLigtsView: View {
+struct TrafficLightsView: View {
      
     var body: some View {
         ZStack {
@@ -35,6 +35,6 @@ struct TrafficLigtsView: View {
 
 struct TrafficLigtsView_Previews: PreviewProvider {
     static var previews: some View {
-        TrafficLigtsView()
+        TrafficLightsView()
     }
 }
